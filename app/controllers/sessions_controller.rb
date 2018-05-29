@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session.destroy
+    session.destroy :name
     redirect_to '/sessions/new'
   end
 end
