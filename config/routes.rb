@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   root 'sessions#create'
   resources :sessions
+  post '/login' => 'sessions#new'
   post '/logout' => 'sessions#destroy'
   get '/secrets' => 'secrets#show'
   # Example of named route that can be invoked with purchase_url(id: product.id)
